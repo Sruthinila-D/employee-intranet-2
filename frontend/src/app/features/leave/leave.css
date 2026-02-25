@@ -1,0 +1,121 @@
+.card {
+
+background: white;
+
+padding: 25px;
+
+border-radius: 10px;
+
+width: 600px;
+
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+
+.input {
+
+width: 100%;
+
+padding: 10px;
+
+margin-bottom: 15px;
+
+border-radius: 6px;
+
+border: 1px solid #ccc;
+
+}
+
+
+.date-row {
+
+display: flex;
+
+gap: 10px;
+
+}
+
+
+.file-row {
+
+margin-top: 10px;
+
+margin-bottom: 15px;
+
+}
+
+
+.file-btn {
+
+background: #2563eb;
+
+color: white;
+
+padding: 8px 15px;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+}
+
+
+.file-text {
+
+margin-left: 10px;
+
+}
+
+
+.submit-btn {
+
+background: #22c55e;
+
+color: white;
+
+border: none;
+
+padding: 10px;
+
+width: 100%;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+}
+
+
+.submit-btn:hover {
+
+background: #16a34a;
+
+}
+
+
+.table {
+
+width: 100%;
+
+margin-top: 15px;
+
+border-collapse: collapse;
+
+}
+
+
+.table th, .table td {
+
+border: 1px solid #ddd;
+
+padding: 8px;
+
+}
+
+
+.table th {
+
+background: #f3f4f6;
+
+}

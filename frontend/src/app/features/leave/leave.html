@@ -1,0 +1,162 @@
+<div class="card">
+
+  <h2>Leave Management</h2>
+
+  <!-- USER ID -->
+
+  <input
+    type="text"
+    placeholder="User ID"
+    [(ngModel)]="user_id"
+    class="input"
+  >
+
+
+  <!-- LEAVE TYPE -->
+
+  <select
+    [(ngModel)]="leave_type"
+    class="input"
+  >
+    <option value="">Select Leave Type</option>
+    <option value="CASUAL">Casual</option>
+    <option value="SICK">Sick</option>
+    <option value="EARNED">Earned</option>
+  </select>
+
+
+
+  <!-- DATE ROW -->
+
+  <div class="date-row">
+
+    <input
+      type="date"
+      [(ngModel)]="start_date"
+      class="input"
+    >
+
+    <input
+      type="date"
+      [(ngModel)]="end_date"
+      class="input"
+    >
+
+  </div>
+
+
+
+  <!-- TOTAL DAYS -->
+
+  <input
+    type="number"
+    placeholder="Total Days"
+    [(ngModel)]="total_days"
+    class="input"
+  >
+
+
+
+  <!-- REASON -->
+
+  <textarea
+    placeholder="Reason"
+    [(ngModel)]="reason"
+    class="input"
+  ></textarea>
+
+
+
+  <!-- FILE UPLOAD -->
+
+  <div class="file-row">
+
+    <label class="file-btn">
+
+      📁 Choose File
+
+      <input
+        type="file"
+        accept=".pdf,.jpg,.png"
+        (change)="onFileSelect($event)"
+        hidden
+      >
+
+    </label>
+
+
+    <span class="file-text">
+
+      {{ file?.name || 'No file selected' }}
+
+    </span>
+
+  </div>
+
+
+
+  <!-- SUBMIT BUTTON -->
+
+  <button
+    class="submit-btn"
+    type="button"
+    (click)="createLeave()"
+  >
+
+    ✔ Submit Leave
+
+  </button>
+
+
+
+  <!-- TABLE -->
+
+  <h3>Leave List</h3>
+
+
+  <table class="table" *ngIf="leaves.length > 0">
+
+
+    <thead>
+
+      <tr>
+
+        <th>ID</th>
+
+        <th>Type</th>
+
+        <th>Status</th>
+
+      </tr>
+
+    </thead>
+
+
+    <tbody>
+
+      <tr *ngFor="let leave of leaves">
+
+        <td>{{leave.leave_id}}</td>
+
+        <td>{{leave.leave_type}}</td>
+
+        <td>{{leave.status}}</td>
+
+      </tr>
+
+    </tbody>
+
+
+  </table>
+
+
+  <!-- NO DATA MESSAGE -->
+
+  <p *ngIf="leaves.length === 0">
+
+    No leaves found
+
+  </p>
+
+
+</div>

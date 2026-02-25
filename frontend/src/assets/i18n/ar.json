@@ -31,7 +31,10 @@
       "engagements": "المشاركات",
       "surveys": "الاستطلاعات",
       "policies": "مستندات السياسة",
+<<<<<<< HEAD
       "tickets": "التذاكر",
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
       "project_management": "إدارة المشاريع",
       "audit_compliance": "التدقيق والامتثال",
       "reports": "التقارير",
@@ -662,7 +665,31 @@
     "css_demo_title": "عرض CSS مخصص لـ Tailwind v4",
     "css_demo_hello": "أهلاً بالعالم!",
     "css_demo_desc": "هذا النص منسق بلون مخصص ('clifford') تم تعريفه باستخدام التوجيه الجديد `@theme` في Tailwind CSS v4."
+<<<<<<< HEAD
   }
 }
 
     
+=======
+  },
+
+    "announcements": {
+    "pageTitle": "الإعلانات",
+    "title": "العنوان",
+    "author": "الكاتب",
+    "publishDate": "تاريخ النشر",
+    "status": "الحالة",
+    "priority": "الأولوية"
+  },
+  "search": "بحث",
+  "addNew": "إضافة إعلان",
+  "actions": "الإجراءات",
+  "view": "عرض",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "noRecordsFound": "لا توجد إعلانات",
+  "table": {
+    "pageReport": "عرض {first} إلى {last} من أصل {totalRecords}"
+  }
+}
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d

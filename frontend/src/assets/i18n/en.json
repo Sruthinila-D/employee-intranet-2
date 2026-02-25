@@ -22,6 +22,10 @@
     "sidebar": {
       "dashboard": "Dashboard",
       "announcements": "Announcements",
+<<<<<<< HEAD
+=======
+      "leave": "Leave Management",
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
       "newsletters": "Newsletters",
       "my_tasks": "My Tasks",
       "calendar": "Calendar & Events",
@@ -35,7 +39,10 @@
       "audit_compliance": "Audit & Compliance",
       "reports": "Reports",
       "help_desk": "Help Desk",
+<<<<<<< HEAD
       "tickets": "Tickets",
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
       "system_settings": "System Settings"
     },
     "os": "OPERATING SYSTEM",

@@ -28,11 +28,19 @@ import { TooltipModule } from 'primeng/tooltip';
     TooltipModule,
   ],
   templateUrl: './layout.html',
+<<<<<<< HEAD
   styleUrl: './layout.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent {
 
+=======
+  styleUrls: ['./layout.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class LayoutComponent {
+  // ✅ Services
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
   private authService = inject(AuthService);
   private router = inject(Router);
   private languageService = inject(LanguageService);
@@ -40,12 +48,23 @@ export class LayoutComponent {
   private confirmationService = inject(ConfirmationService);
   private translate = inject(TranslateService);
 
+<<<<<<< HEAD
   isSidebarOpen = signal(true);
 
+=======
+  // ✅ UI state
+  isSidebarOpen = signal(true);
+
+  // ✅ App state
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
   currentUser = this.authService.currentUser;
   currentLanguage = this.languageService.language;
   currentTheme = this.themeService.theme;
 
+<<<<<<< HEAD
+=======
+  // ✅ Sidebar config
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
   private allSidebarNavItems: {
     icon: string;
     labelKey: string;
@@ -53,53 +72,81 @@ export class LayoutComponent {
     exact: boolean;
     roles?: User['role'][];
   }[] = [
+<<<<<<< HEAD
 
     { icon: 'pi-chart-bar', labelKey: 'layout.sidebar.dashboard', path: '/', exact: true },
 
+=======
+    { icon: 'pi-chart-bar', labelKey: 'layout.sidebar.dashboard', path: '/', exact: true },
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-megaphone',
       labelKey: 'layout.sidebar.announcements',
       path: '/announcements',
       exact: false,
     },
+<<<<<<< HEAD
 
     { icon: 'pi-book', labelKey: 'layout.sidebar.newsletters', path: '/products', exact: false },
 
+=======
+    { icon: 'pi-book', labelKey: 'layout.sidebar.newsletters', path: '/products', exact: false },
+    {
+      icon: 'pi-check-square',
+      labelKey: 'layout.sidebar.leave',
+      path: '/leave',
+      exact: false,
+    },
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-check-square',
       labelKey: 'layout.sidebar.my_tasks',
       path: '/my-tasks',
       exact: false,
     },
+<<<<<<< HEAD
 
     { icon: 'pi-calendar', labelKey: 'layout.sidebar.calendar', path: '/calendar', exact: false },
 
     { icon: 'pi-users', labelKey: 'layout.sidebar.directory', path: '/directory', exact: false },
 
+=======
+    { icon: 'pi-calendar', labelKey: 'layout.sidebar.calendar', path: '/calendar', exact: false },
+    { icon: 'pi-users', labelKey: 'layout.sidebar.directory', path: '/directory', exact: false },
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-calendar-times',
       labelKey: 'layout.sidebar.leave_management',
       path: '/hr-services',
       exact: false,
     },
+<<<<<<< HEAD
 
     { icon: 'pi-star', labelKey: 'layout.sidebar.rewards', path: '/rewards', exact: false },
 
+=======
+    { icon: 'pi-star', labelKey: 'layout.sidebar.rewards', path: '/rewards', exact: false },
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-sparkles',
       labelKey: 'layout.sidebar.engagements',
       path: '/engagements',
       exact: false,
     },
+<<<<<<< HEAD
 
     { icon: 'pi-chart-pie', labelKey: 'layout.sidebar.surveys', path: '/surveys', exact: false },
 
+=======
+    { icon: 'pi-chart-pie', labelKey: 'layout.sidebar.surveys', path: '/surveys', exact: false },
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-file',
       labelKey: 'layout.sidebar.policies',
       path: '/policy-documents',
       exact: false,
     },
+<<<<<<< HEAD
 
     // ✅ NEW: Tickets
     {
@@ -111,6 +158,8 @@ export class LayoutComponent {
       roles: ['Employee', 'Manager', 'HR', 'Admin']
     },
 
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-briefcase',
       labelKey: 'layout.sidebar.project_management',
@@ -118,7 +167,10 @@ export class LayoutComponent {
       exact: false,
       roles: ['Manager', 'Admin'],
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-scale',
       labelKey: 'layout.sidebar.audit_compliance',
@@ -126,7 +178,10 @@ export class LayoutComponent {
       exact: false,
       roles: ['HR', 'Admin'],
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-chart-line',
       labelKey: 'layout.sidebar.reports',
@@ -134,14 +189,20 @@ export class LayoutComponent {
       exact: false,
       roles: ['Manager', 'HR', 'Admin'],
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-question-circle',
       labelKey: 'layout.sidebar.help_desk',
       path: '/help-desk',
       exact: false,
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
     {
       icon: 'pi-cog',
       labelKey: 'layout.sidebar.system_settings',
@@ -151,6 +212,7 @@ export class LayoutComponent {
     },
   ];
 
+<<<<<<< HEAD
   sidebarNavItems = computed(() => {
     const user = this.currentUser();
     if (!user) return [];
@@ -159,6 +221,16 @@ export class LayoutComponent {
     );
   });
 
+=======
+  // ✅ Role-based sidebar
+  sidebarNavItems = computed(() => {
+    const user = this.currentUser();
+    if (!user) return [];
+    return this.allSidebarNavItems.filter((item) => !item.roles || item.roles.includes(user.role));
+  });
+
+  // ✅ Actions
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d
   toggleSidebar() {
     this.isSidebarOpen.update((open) => !open);
   }
@@ -203,4 +275,8 @@ export class LayoutComponent {
       this.router.navigate(['/search'], { queryParams: { q: query } });
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 511d2f22d19f357176e376deda97ef0204290c0d

@@ -1,0 +1,117 @@
+.card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  width: 600px;
+
+}
+
+
+.form-group {
+
+  margin-bottom: 15px;
+
+}
+
+
+input, select, textarea {
+
+  width: 100%;
+
+  padding: 8px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+
+}
+
+
+.date-group {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+
+.submit-btn {
+
+  background-color: #22c55e;
+
+  color: white;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  width: 100%;
+
+}
+
+
+.submit-btn:hover {
+
+  background-color: #16a34a;
+
+}
+
+
+.file-label {
+
+  background-color: #3b82f6;
+
+  color: white;
+
+  padding: 8px 15px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}
+
+
+.file-name {
+
+  margin-left: 10px;
+
+}
+
+
+.leave-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+}
+
+
+.leave-table th,
+
+.leave-table td {
+
+  border: 1px solid #ddd;
+
+  padding: 8px;
+
+}
+
+
+.leave-table th {
+
+  background-color: #f3f4f6;
+
+}
