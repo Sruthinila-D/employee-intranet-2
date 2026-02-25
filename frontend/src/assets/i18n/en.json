@@ -1,0 +1,685 @@
+{
+  "login": {
+    "sami": "SAMI",
+    "digital_project": "DIGITAL PROJECT",
+    "title": "Enterprise Sign In",
+    "subtitle": "Use your SAMI account to access the portal. This system is for authorized use only.",
+    "select_role": "Select Role to Simulate SSO",
+    "role": {
+      "employee": "Employee",
+      "manager": "Manager",
+      "hr": "HR",
+      "admin": "Admin"
+    },
+    "signin_button": "Sign in with SSO",
+    "terms_prefix": "By continuing, you agree to our",
+    "terms_of_service": "Terms of Service",
+    "terms_and": "and",
+    "terms_privacy_policy": "Privacy Policy"
+  },
+  "layout": {
+    "sami_project": "SAMI Project",
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "announcements": "Announcements",
+      "Expense": "Expense",
+      "newsletters": "Newsletters",
+      "my_tasks": "My Tasks",
+      "calendar": "Calendar & Events",
+      "directory": "Employee Directory",
+      "leave_management": "HR Self-Service",
+      "rewards": "Rewards & Recognition",
+      "engagements": "Engagements",
+      "surveys": "Surveys",
+      "policies": "Policy Documents",
+      "project_management": "Project Management",
+      "audit_compliance": "Audit & Compliance",
+      "reports": "Reports",
+      "help_desk": "Help Desk",
+      "system_settings": "System Settings"
+    },
+    "os": "OPERATING SYSTEM",
+    "search_placeholder": "Search portal...",
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "user_role": {
+      "employee": "EMPLOYEE",
+      "manager": "MANAGER",
+      "hr": "HR",
+      "admin": "ADMIN"
+    },
+    "profile_link": "My Profile",
+    "logout_button": "Logout",
+    "logout_confirm_title": "Confirm Logout",
+    "logout_confirm_message": "Are you sure you want to log out?",
+    "logout_confirm_button": "Logout",
+    "tooltip": {
+      "toggle_sidebar_collapse": "Collapse sidebar",
+      "toggle_sidebar_expand": "Expand sidebar",
+      "dark_mode": "Switch to dark mode",
+      "light_mode": "Switch to light mode",
+      "notifications": "View notifications"
+    }
+  },
+  "dashboard": {
+    "welcome": {
+      "back_user": "Welcome back, {name}",
+      "manager": "Manager's Dashboard",
+      "hr": "Human Resources Dashboard",
+      "admin": "System Administration Dashboard"
+    },
+    "subtitle": {
+      "employee": "Here's your personal snapshot and quick actions.",
+      "manager": "An overview of your team's status and pending actions.",
+      "hr": "A high-level view of workforce analytics and operations.",
+      "admin": "An overview of system health, security, and user management."
+    },
+    "personal_snapshot": "Personal Snapshot",
+    "todays_status": "Today's Status",
+    "status_present": "Present - Office",
+    "leave_balance": "Leave Balance",
+    "upcoming_leave": "Upcoming Leave",
+    "no_upcoming_leave": "No approved leave.",
+    "no_upcoming_events": "No upcoming events.",
+    "no_upcoming_events_desc": "There are no events scheduled for the next 7 days.",
+    "my_tasks": "My Tasks",
+    "quick_actions": "Quick Actions",
+    "apply_leave": "Apply Leave",
+    "raise_request": "Raise Request",
+    "view_payslip": "View Payslip",
+    "mandatory_trainings": "Mandatory Trainings",
+    "no_trainings": "No pending trainings.",
+    "team_availability": "Team Availability",
+    "on_leave": "On Leave",
+    "wfh": "WFH",
+    "team_member_status": "Team Member Status",
+    "task_distribution": "Task Distribution",
+    "open_positions": "Open Positions",
+    "no_open_positions": "No open positions in this department.",
+    "recent_team_activity": "Recent Team Activity",
+    "workforce_metrics": "Workforce Metrics",
+    "total_headcount": "Total Headcount",
+    "attrition_rate": "Attrition Rate",
+    "new_hires_month": "New Hires (Month)",
+    "recruitment_pipeline": "Recruitment Pipeline",
+    "leave_trends": "Leave Trends",
+    "absenteeism_hotspots": "Absenteeism Hotspots",
+    "compliance_overview": "Compliance Overview",
+    "policy_ack": "Policy Acknowledgements",
+    "recent_hires": "Recent Hires",
+    "system_health": "System Health",
+    "uptime": "Uptime",
+    "api_latency": "API Latency",
+    "active_users": "Active Users",
+    "failed_logins": "Failed Logins",
+    "user_role_management": "User & Role Management",
+    "audit_logs": "Audit Logs",
+    "announcements": "Announcements",
+    "view_all": "View All",
+    "portal_updates": "Portal Updates"
+  },
+  "kpi": {
+    "active_employees": "Active Employees",
+    "pending_approvals": "Pending Approvals",
+    "open_tickets": "Open Help Tickets",
+    "active_surveys": "Active Surveys",
+    "leave_by_type": "Leave Requests by Type",
+    "task_status": "Task Status Distribution",
+    "recent_activity": "Recent Portal Activity",
+    "my_open_tasks": "My Open Tasks",
+    "my_leave_balance": "My Leave Balance",
+    "employee_distribution": "Employees by Department",
+    "my_pending_recognitions": "My Recognitions",
+    "team_open_tasks": "Team's Open Tasks",
+    "team_leave_requests": "Team Leave Requests",
+    "team_members": "Team Members",
+    "employee_turnover": "Employee Turnover",
+    "team_task_distribution": "Team Task Distribution",
+    "upcoming_events": "Upcoming Events",
+    "recent_announcements": "Recent Announcements"
+  },
+  "announcements": {
+    "title": "Announcements",
+    "publish": "Publish Announcement",
+    "search_placeholder": "Search announcements...",
+    "filter": {
+      "all": "All",
+      "published": "Published",
+      "pending": "Pending Approval",
+      "rejected": "Rejected"
+    },
+    "status": {
+      "published": "Published",
+      "pending": "Pending Approval",
+      "rejected": "Rejected"
+    },
+    "priority": {
+      "normal": "Normal",
+      "urgent": "Urgent"
+    },
+    "modal": {
+      "create_title": "Create Announcement",
+      "edit_title": "Edit Announcement",
+      "label": {
+        "title": "Title",
+        "content": "Content",
+        "priority": "Priority",
+        "audience": "Target Audience",
+        "location": "Target Location",
+        "publish_date": "Publish Date"
+      },
+      "placeholder": {
+        "audience": "e.g., All Employees, Engineering Department"
+      },
+      "save_button": "Save Announcement",
+      "reject_title": "Reject Announcement",
+      "rejection_reason": "Reason for Rejection",
+      "reject_button": "Reject"
+    },
+    "action": {
+      "view": "View",
+      "edit": "Edit",
+      "approve": "Approve",
+      "reject": "Reject",
+      "delete": "Delete"
+    },
+    "rejection_comment": "Rejection Comment",
+    "approve_success": "Announcement approved successfully.",
+    "reject_success": "Announcement rejected successfully.",
+    "create_success": "Announcement created successfully and sent for approval.",
+    "edit_success": "Announcement updated successfully.",
+    "pagination": {
+      "page_of": "Page {currentPage} of {totalPages}",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "is_event": "Is this an Event?",
+    "event_date": "Event Date",
+    "event_time": "Event Time",
+    "role_all": "All Roles",
+    "location_all": "All Locations",
+    "event_created_in_calendar": "Event automatically added to calendar."
+  },
+  "newsletters": {
+    "title": "Newsletters",
+    "create_newsletter": "Create Newsletter",
+    "search_placeholder": "Search newsletters...",
+    "published_on": "Published on {date}",
+    "by": "By {author}",
+    "read_more": "Read More",
+    "no_newsletters": "No newsletters found.",
+    "back_to_archive": "Back to Archive",
+    "modal": {
+      "create_title": "Create New Newsletter",
+      "edit_title": "Edit Newsletter",
+      "label": {
+        "title": "Title",
+        "summary": "Summary",
+        "content": "Content"
+      },
+      "save_button": "Publish Newsletter"
+    },
+    "create_success": "Newsletter created successfully.",
+    "update_success": "Newsletter updated successfully.",
+    "delete_success": "Newsletter deleted successfully.",
+    "delete_confirm": "Are you sure you want to delete this newsletter?",
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "calendar": {
+    "title": "Calendar & Events",
+    "create_event": "Create Event",
+    "edit_event": "Edit Event",
+    "event_details": "Event Details",
+    "today": "Today",
+    "view_calendar": "Month View",
+    "view_week": "Week View",
+    "view_list": "List View",
+    "label": {
+      "title": "Event Title",
+      "date": "Date",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "event_type": "Event Type",
+      "audience": "Audience",
+      "notifications": "Enable Notifications"
+    },
+    "event_type": {
+      "holiday": "Holiday",
+      "event": "Event",
+      "engagement": "Engagement"
+    },
+    "create_success": "Event created successfully.",
+    "update_success": "Event updated successfully.",
+    "delete_success": "Event deleted successfully.",
+    "action": {
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "save_event": "Save Event",
+    "error_time_range": "End time cannot be before start time.",
+    "month": {
+      "jauary": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "day": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun_short": "S",
+      "mon_short": "M",
+      "tue_short": "T",
+      "wed_short": "W",
+      "thu_short": "T",
+      "fri_short": "F",
+      "sat_short": "S"
+    }
+  },
+  "directory": {
+    "title": "Employee Directory",
+    "search_placeholder": "Search by name or role...",
+    "filter_department": "Filter by Department",
+    "all_departments": "All Departments",
+    "department": {
+      "engineering": "Engineering",
+      "hr": "HR",
+      "marketing": "Marketing",
+      "finance": "Finance"
+    },
+    "recognitions_count": "{count} Recognitions",
+    "add_employee": "Add Employee",
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "modal": {
+      "create_title": "Create Employee Profile",
+      "edit_title": "Edit Employee Profile",
+      "label": {
+        "name": "Name",
+        "role": "Role",
+        "email": "Email",
+        "department": "Department",
+        "location": "Location"
+      }
+    },
+    "create_success": "Employee added successfully.",
+    "update_success": "Employee updated successfully.",
+    "delete_success": "Employee deleted successfully.",
+    "delete_confirm": "Are you sure you want to delete this employee?",
+    "table": {
+      "header": {
+        "employee": "Employee",
+        "role": "Role",
+        "department": "Department",
+        "email": "Email"
+      },
+      "actions": "Actions"
+    },
+    "view_grid": "Grid View",
+    "view_table": "Table View"
+  },
+  "hr_self_service": {
+    "title": "HR Self-Service",
+    "attendance_title": "Attendance Summary",
+    "attendance_rate": "This Quarter",
+    "leave_balance_title": "My Leave Balance",
+    "request_leave": "Request Leave",
+    "my_requests": "My Leave Requests",
+    "all_requests": "All Employee Leave Requests",
+    "balance": {
+      "annual": "Annual",
+      "sick": "Sick",
+      "unpaid": "Unpaid"
+    },
+    "days_remaining": "Days Remaining",
+    "modal": {
+      "request_title": "Submit Leave Request",
+      "label": {
+        "type": "Leave Type",
+        "start_date": "Start Date",
+        "end_date": "End Date",
+        "reason": "Reason (Optional)"
+      },
+      "submit_button": "Submit Request"
+    },
+    "request_success": "Leave request submitted successfully.",
+    "approve_success": "Leave request approved.",
+    "reject_success": "Leave request rejected.",
+    "withdraw_success": "Leave request withdrawn successfully.",
+    "status": {
+      "pending": "Pending Approval",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "filter_all": "All",
+    "action": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "withdraw": "Withdraw"
+    },
+    "withdraw_confirm": "Are you sure you want to withdraw this leave request?",
+    "withdraw_modal_title": "Confirm Withdrawal",
+    "withdraw_confirm_button": "Confirm Withdraw",
+    "rejection_reason": "Reason for Rejection",
+    "rejection_comment_placeholder": "Provide a reason...",
+    "rejection_modal_title": "Reject Leave Request",
+    "table": {
+      "employee": "Employee",
+      "dates": "Dates",
+      "type": "Type",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "tab": {
+      "my_leave": "My Information",
+      "team_leave": "Team Leave Approval"
+    },
+    "error_end_date": "End date cannot be before start date."
+  },
+  "rewards": {
+    "title": "Rewards & Recognition",
+    "give_recognition": "Give Recognition",
+    "recent": "Recent Recognitions",
+    "submit": "Submit",
+    "submit_success": "Recognition submitted successfully!",
+    "nominate_employee": "Nominate an Employee",
+    "nominee_name": "Employee Name",
+    "justification": "Justification for Nomination",
+    "submit_nomination": "Submit Nomination",
+    "nomination_success": "Nomination submitted for HR approval.",
+    "recognition_feed": "Recognition Feed",
+    "nominated_by": "Nominated by {nominator}",
+    "badge": "Badge",
+    "action": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "delete": "Delete"
+    },
+    "nomination_status": "Nomination Status"
+  },
+  "engagements": {
+    "title": "Engagement Campaigns",
+    "active_campaigns": "Active Campaigns",
+    "completed_campaigns": "Completed Campaigns",
+    "participate": "Participate",
+    "participated": "Participated",
+    "participation_success": "Thank you for participating!",
+    "no_active_campaigns": "There are no active engagement campaigns right now."
+  },
+  "surveys": {
+    "title": "Surveys",
+    "active": "Active Surveys",
+    "completed": "Completed Surveys",
+    "take_survey": "Take Survey",
+    "view_results": "View Results",
+    "take_survey_placeholder": "Survey functionality is under development.",
+    "view_results_placeholder": "Results are not yet available.",
+    "create_survey": "Create Survey",
+    "create_success": "Survey created successfully.",
+    "submit_success": "Your response has been submitted successfully!",
+    "delete_success": "Survey deleted successfully.",
+    "delete_confirm": "Are you sure you want to delete this survey?",
+    "modal": {
+      "create_title": "Create New Survey",
+      "edit_title": "Edit Survey",
+      "take_title": "Take Survey",
+      "label": {
+        "title": "Survey Title",
+        "description": "Description (Optional)",
+        "anonymous": "Anonymous Responses",
+        "required": "Required"
+      },
+      "add_question": "Add Question",
+      "question_text": "Question",
+      "question_type": "Question Type",
+      "add_option": "Add Option",
+      "option_placeholder": "Option",
+      "question_header": "Question {index}",
+      "options_label": "Options"
+    },
+    "save_button": "Save Survey",
+    "submit_button": "Submit Response",
+    "question_type": {
+      "text": "Single Line Text",
+      "paragraph": "Paragraph",
+      "mcq": "Multiple Choice",
+      "rating": "Rating (1-5)"
+    },
+    "results": {
+      "title": "Survey Results",
+      "total_responses": "Total Responses",
+      "average_rating": "Average Rating",
+      "from_ratings": "from {count} ratings",
+      "no_text_responses": "No text responses."
+    },
+    "question_count": "{count} Questions",
+    "completed_status": "Completed",
+    "no_active": "No active surveys.",
+    "no_completed": "No completed surveys."
+  },
+  "policies": {
+    "title": "Policy Documents",
+    "search_placeholder": "Search documents...",
+    "download": "Download",
+    "add_document": "Add Document",
+    "modal": {
+      "create_title": "Create Policy Document",
+      "edit_title": "Edit Policy Document",
+      "view_title": "View Policy Document",
+      "label": {
+        "title": "Title",
+        "category": "Category",
+        "version": "Version",
+        "visibility": "Visible To",
+        "content": "Content"
+      },
+      "save_button": "Save Document"
+    },
+    "role": {
+      "employee": "Employee",
+      "manager": "Manager",
+      "hr": "HR",
+      "admin": "Admin"
+    },
+    "action": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "pagination": {
+      "page_of": "Page {currentPage} of {totalPages}",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "create_success": "Policy document created successfully.",
+    "update_success": "Policy document updated successfully.",
+    "error_file_type": "Invalid file type. Please upload a .txt file.",
+    "content_write": "Write Content",
+    "content_upload": "Upload File"
+  },
+  "tasks": {
+    "title": "My Tasks",
+    "new_task": "New Task",
+    "status": {
+      "todo": "To Do",
+      "in_progress": "In Progress",
+      "done": "Done"
+    },
+    "assign_success": "Task assigned successfully.",
+    "update_success": "Task updated successfully.",
+    "delete_success": "Task deleted successfully.",
+    "create_task": "Create Task",
+    "all_tasks": "All Tasks",
+    "due_on": "Due on",
+    "modal": {
+      "create_title": "Create New Task",
+      "edit_title": "Edit Task",
+      "label": {
+        "title": "Task Title",
+        "description": "Description",
+        "assign_to": "Assign To",
+        "due_date": "Due Date"
+      }
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "delete_confirm": "Are you sure you want to delete this task?",
+    "more_options": "More options",
+    "save_changes_button": "Save Changes"
+  },
+  "reports": {
+    "title": "Reports & Dashboards",
+    "export": "Export",
+    "usage_metrics": "Usage Metrics",
+    "monthly_active_users": "Monthly Active Users",
+    "adoption_rates": "Feature Adoption Rates",
+    "feature": {
+      "announcements": "Announcements",
+      "tasks": "Tasks",
+      "surveys": "Surveys"
+    },
+    "hr_summary": "HR Summary",
+    "project_summary": "Project Summary",
+    "data_table": "Detailed Data",
+    "table": {
+      "header": {
+        "name": "Report Name",
+        "category": "Category",
+        "value": "Value",
+        "status": "Status"
+      }
+    },
+    "export_placeholder": "Exporting report data..."
+  },
+  "search": {
+    "title": "Search Results",
+    "results_for": "Search results for '{query}'",
+    "no_results": "No results found for your search.",
+    "category": {
+      "announcements": "Announcements",
+      "employees": "Employees",
+      "policies": "Policy Documents",
+      "newsletters": "Newsletters"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "label": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "role": "Role",
+      "department": "Department",
+      "location": "Location",
+      "contact": "Contact Information"
+    }
+  },
+  "placeholder_under_development": "This module is currently under development. Please check back later.",
+  "global": {
+    "error_unexpected": "An unexpected error occurred. Please try again later.",
+    "success_generic": "Operation completed successfully.",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "delete_confirm_title": "Confirm Deletion",
+    "delete_confirm_message": "Are you sure you want to delete this item? This action cannot be undone.",
+    "delete_confirm_button": "Delete",
+    "add_new": "Add New",
+    "table_no_data": "No data available."
+  },
+  "table": {
+    "rows_per_page": "Rows per page"
+  },
+  "tooltip": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "more_options": "More options",
+    "remove_question": "Remove question",
+    "remove_option": "Remove option",
+    "board_view": "Board view",
+    "list_view": "List view"
+  },
+  "helpdesk": {
+    "create_success": "Help ticket created successfully.",
+    "update_success": "Help ticket updated successfully.",
+    "modal": {
+      "create_title": "Create Help Ticket",
+      "edit_title": "Edit Help Ticket",
+      "label": {
+        "subject": "Subject",
+        "category": "Category",
+        "description": "Description"
+      },
+      "category_options": {
+        "it": "IT",
+        "hr": "HR",
+        "facilities": "Facilities"
+      }
+    }
+  },
+  "system_settings": {
+    "demo_subtitle": "Demonstration of new shared UI components.",
+    "dropdown_title": "Custom Dropdown Menu",
+    "dropdown_button": "Open Menu",
+    "dropdown_profile": "Profile",
+    "dropdown_billing": "Billing",
+    "dropdown_settings": "Settings",
+    "dropdown_logout": "Logout",
+    "select_title": "Custom Select Control",
+    "select_label_lang": "Default Language",
+    "select_placeholder_lang": "Select a language...",
+    "select_option_en": "English",
+    "select_option_ar": "العربية (Arabic)",
+    "select_option_fr": "Français (French)",
+    "select_label_notify": "Notification Level",
+    "select_placeholder_notify": "Set notification level...",
+    "select_option_all": "All Notifications",
+    "select_option_mentions": "Mentions Only",
+    "select_option_none": "None",
+    "form_value_title": "Form Value:",
+    "css_demo_title": "Tailwind v4 Custom CSS Demo",
+    "css_demo_hello": "Hello world!",
+    "css_demo_desc": "This text is styled with a custom color ('clifford') defined using the new `@theme` directive in Tailwind CSS v4."
+  },
+
+  "announcements": {
+    "pageTitle": "Announcements",
+    "title": "Title",
+    "author": "Author",
+    "publishDate": "Publish Date",
+    "status": "Status",
+    "priority": "Priority"
+  },
+  "search": "Search",
+  "addNew": "Add Announcement",
+  "actions": "Actions",
+  "view": "View",
+  "edit": "Edit",
+  "delete": "Delete",
+  "noRecordsFound": "No announcements found",
+  "table": {
+    "pageReport": "Showing {first} to {last} of {totalRecords}"
+  }
+}

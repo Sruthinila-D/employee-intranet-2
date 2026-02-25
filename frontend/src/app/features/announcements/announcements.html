@@ -1,0 +1,18 @@
+<p-card class="w-full">
+  <app-table
+    [data]="announcements"
+    [columns]="columns"
+    titleKey="announcements.pageTitle"
+
+    [enableView]="true"
+    [enableEdit]="true"
+    [enableDelete]="true"
+
+    (add)="onAdd()"
+    (view)="onView($event)"
+    (edit)="onEdit($event)"
+    (remove)="onDelete($event)"
+  />
+
+</p-card>
+

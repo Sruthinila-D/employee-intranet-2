@@ -1,0 +1,684 @@
+{
+  "login": {
+    "sami": "سامي",
+    "digital_project": "مشروع رقمي",
+    "title": "تسجيل دخول المؤسسة",
+    "subtitle": "استخدم حساب سامي الخاص بك للوصول إلى البوابة. هذا النظام مخصص للاستخدام المصرح به فقط.",
+    "select_role": "حدد دورًا لمحاكاة الدخول الموحد",
+    "role": {
+      "employee": "موظف",
+      "manager": "مدير",
+      "hr": "موارد بشرية",
+      "admin": "مسؤول"
+    },
+    "signin_button": "تسجيل الدخول باستخدام SSO",
+    "terms_prefix": "من خلال المتابعة، فإنك توافق على",
+    "terms_of_service": "شروط الخدمة",
+    "terms_and": "و",
+    "terms_privacy_policy": "سياسة الخصوصية"
+  },
+  "layout": {
+    "sami_project": "مشروع سامي",
+    "sidebar": {
+      "dashboard": "لوحة المعلومات",
+      "announcements": "الإعلانات",
+      "newsletters": "النشرات الإخبارية",
+      "my_tasks": "مهامي",
+      "calendar": "التقويم والأحداث",
+      "directory": "دليل الموظفين",
+      "leave_management": "الخدمة الذاتية للموارد البشرية",
+      "rewards": "المكافآت والتقدير",
+      "engagements": "المشاركات",
+      "surveys": "الاستطلاعات",
+      "policies": "مستندات السياسة",
+      "project_management": "إدارة المشاريع",
+      "audit_compliance": "التدقيق والامتثال",
+      "reports": "التقارير",
+      "help_desk": "مكتب المساعدة",
+      "system_settings": "إعدادات النظام"
+    },
+    "os": "نظام التشغيل",
+    "search_placeholder": "ابحث في البوابة...",
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "user_role": {
+      "employee": "موظف",
+      "manager": "مدير",
+      "hr": "موارد بشرية",
+      "admin": "مسؤول"
+    },
+    "profile_link": "ملفي الشخصي",
+    "logout_button": "تسجيل الخروج",
+    "logout_confirm_title": "تأكيد تسجيل الخروج",
+    "logout_confirm_message": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "logout_confirm_button": "تسجيل الخروج",
+    "tooltip": {
+      "toggle_sidebar_collapse": "طي الشريط الجانبي",
+      "toggle_sidebar_expand": "توسيع الشريط الجانبي",
+      "dark_mode": "التبديل إلى الوضع المظلم",
+      "light_mode": "التبديل إلى الوضع الفاتح",
+      "notifications": "عرض الإشعارات"
+    }
+  },
+  "dashboard": {
+    "welcome": {
+      "back_user": "مرحبًا بعودتك، {name}",
+      "manager": "لوحة معلومات المدير",
+      "hr": "لوحة معلومات الموارد البشرية",
+      "admin": "لوحة معلومات مسؤول النظام"
+    },
+    "subtitle": {
+      "employee": "إليك لقطة شخصية وإجراءات سريعة.",
+      "manager": "نظرة عامة على حالة فريقك والإجراءات المعلقة.",
+      "hr": "عرض عالي المستوى لتحليلات وعمليات القوى العاملة.",
+      "admin": "نظرة عامة على صحة النظام والأمان وإدارة المستخدمين."
+    },
+    "personal_snapshot": "لمحة شخصية",
+    "todays_status": "حالة اليوم",
+    "status_present": "حاضر - في المكتب",
+    "leave_balance": "رصيد الإجازات",
+    "upcoming_leave": "الإجازات القادمة",
+    "no_upcoming_leave": "لا توجد إجازات معتمدة.",
+    "no_upcoming_events": "لا توجد أحداث قادمة.",
+    "no_upcoming_events_desc": "لا توجد أحداث مجدولة خلال السبعة أيام القادمة.",
+    "my_tasks": "مهامي",
+    "quick_actions": "إجراءات سريعة",
+    "apply_leave": "طلب إجازة",
+    "raise_request": "رفع طلب",
+    "view_payslip": "عرض قسيمة الراتب",
+    "mandatory_trainings": "التدريبات الإلزامية",
+    "no_trainings": "لا توجد تدريبات معلقة.",
+    "team_availability": "توفر الفريق",
+    "on_leave": "في إجازة",
+    "wfh": "عمل عن بعد",
+    "team_member_status": "حالة أعضاء الفريق",
+    "task_distribution": "توزيع المهام",
+    "open_positions": "الوظائف الشاغرة",
+    "no_open_positions": "لا توجد وظائف شاغرة في هذا القسم.",
+    "recent_team_activity": "نشاط الفريق الأخير",
+    "workforce_metrics": "مقاييس القوى العاملة",
+    "total_headcount": "إجمالي عدد الموظفين",
+    "attrition_rate": "معدل الاستنزاف",
+    "new_hires_month": "التعيينات الجديدة (شهري)",
+    "recruitment_pipeline": "خط أنابيب التوظيف",
+    "leave_trends": "اتجاهات الإجازات",
+    "absenteeism_hotspots": "نقاط الغياب الساخنة",
+    "compliance_overview": "نظرة عامة على الامتثال",
+    "policy_ack": "إقرارات السياسة",
+    "recent_hires": "التعيينات الأخيرة",
+    "system_health": "صحة النظام",
+    "uptime": "وقت التشغيل",
+    "api_latency": "زمن انتقال الواجهة البرمجية",
+    "active_users": "المستخدمون النشطون",
+    "failed_logins": "محاولات الدخول الفاشلة",
+    "user_role_management": "إدارة المستخدمين والأدوار",
+    "audit_logs": "سجلات التدقيق",
+    "announcements": "الإعلانات",
+    "view_all": "عرض الكل",
+    "portal_updates": "تحديثات البوابة"
+  },
+  "kpi": {
+    "active_employees": "الموظفون النشطون",
+    "pending_approvals": "الموافقات المعلقة",
+    "open_tickets": "تذاكر المساعدة المفتوحة",
+    "active_surveys": "الاستطلاعات النشطة",
+    "leave_by_type": "طلبات الإجازة حسب النوع",
+    "task_status": "توزيع حالة المهام",
+    "recent_activity": "نشاط البوابة الأخير",
+    "my_open_tasks": "مهامي المفتوحة",
+    "my_leave_balance": "رصيد إجازاتي",
+    "employee_distribution": "الموظفون حسب القسم",
+    "my_pending_recognitions": "تقديراتي",
+    "team_open_tasks": "مهام الفريق المفتوحة",
+    "team_leave_requests": "طلبات إجازات الفريق",
+    "team_members": "أعضاء الفريق",
+    "employee_turnover": "معدل دوران الموظفين",
+    "team_task_distribution": "توزيع مهام الفريق",
+    "upcoming_events": "الأحداث القادمة",
+    "recent_announcements": "أحدث الإعلانات"
+  },
+  "announcements": {
+    "title": "الإعلانات",
+    "publish": "نشر إعلان",
+    "search_placeholder": "ابحث في الإعلانات...",
+    "filter": {
+      "all": "الكل",
+      "published": "المنشورة",
+      "pending": "بانتظار الموافقة",
+      "rejected": "المرفوضة"
+    },
+    "status": {
+      "published": "منشور",
+      "pending": "بانتظار الموافقة",
+      "rejected": "مرفوض"
+    },
+    "priority": {
+      "normal": "عادي",
+      "urgent": "عاجل"
+    },
+    "modal": {
+      "create_title": "إنشاء إعلان",
+      "edit_title": "تعديل الإعلان",
+      "label": {
+        "title": "العنوان",
+        "content": "المحتوى",
+        "priority": "الأولوية",
+        "audience": "الجمهور المستهدف",
+        "location": "الموقع المستهدف",
+        "publish_date": "تاريخ النشر"
+      },
+      "placeholder": {
+        "audience": "مثال: كل الموظفين، قسم الهندسة"
+      },
+      "save_button": "حفظ الإعلان",
+      "reject_title": "رفض الإعلان",
+      "rejection_reason": "سبب الرفض",
+      "reject_button": "رفض"
+    },
+    "action": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "approve": "موافقة",
+      "reject": "رفض",
+      "delete": "حذف"
+    },
+    "rejection_comment": "تعليق الرفض",
+    "approve_success": "تمت الموافقة على الإعلان بنجاح.",
+    "reject_success": "تم رفض الإعلان بنجاح.",
+    "create_success": "تم إنشاء الإعلان بنجاح وإرساله للموافقة.",
+    "edit_success": "تم تحديث الإعلان بنجاح.",
+    "pagination": {
+      "page_of": "صفحة {currentPage} من {totalPages}",
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "is_event": "هل هذا حدث؟",
+    "event_date": "تاريخ الحدث",
+    "event_time": "وقت الحدث",
+    "role_all": "كل الأدوار",
+    "location_all": "كل المواقع",
+    "event_created_in_calendar": "تمت إضافة الحدث تلقائيًا إلى التقويم."
+  },
+  "newsletters": {
+    "title": "النشرات الإخبارية",
+    "create_newsletter": "إنشاء نشرة إخبارية",
+    "search_placeholder": "ابحث في النشرات الإخبارية...",
+    "published_on": "نشر في {date}",
+    "by": "بواسطة {author}",
+    "read_more": "اقرأ المزيد",
+    "no_newsletters": "لم يتم العثور على نشرات إخبارية.",
+    "back_to_archive": "العودة إلى الأرشيف",
+    "modal": {
+      "create_title": "إنشاء نشرة إخبارية جديدة",
+      "edit_title": "تعديل النشرة الإخبارية",
+      "label": {
+        "title": "العنوان",
+        "summary": "الملخص",
+        "content": "المحتوى (يدعم HTML)"
+      },
+      "save_button": "نشر النشرة الإخبارية"
+    },
+    "create_success": "تم إنشاء النشرة الإخبارية بنجاح.",
+    "update_success": "تم تحديث النشرة الإخبارية بنجاح.",
+    "delete_success": "تم حذف النشرة الإخبارية بنجاح.",
+    "delete_confirm": "هل أنت متأكد أنك تريد حذف هذه النشرة الإخبارية؟",
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    }
+  },
+  "calendar": {
+    "title": "التقويم والأحداث",
+    "create_event": "إنشاء حدث",
+    "edit_event": "تعديل الحدث",
+    "event_details": "تفاصيل الحدث",
+    "today": "اليوم",
+    "view_calendar": "عرض الشهر",
+    "view_week": "عرض الأسبوع",
+    "view_list": "عرض القائمة",
+    "label": {
+      "title": "عنوان الحدث",
+      "date": "التاريخ",
+      "start_time": "وقت البدء",
+      "end_time": "وقت الانتهاء",
+      "event_type": "نوع الحدث",
+      "audience": "الجمهور",
+      "notifications": "تفعيل الإشعارات"
+    },
+    "event_type": {
+      "holiday": "عطلة",
+      "event": "حدث",
+      "engagement": "مشاركة"
+    },
+    "create_success": "تم إنشاء الحدث بنجاح.",
+    "update_success": "تم تحديث الحدث بنجاح.",
+    "delete_success": "تم حذف الحدث بنجاح.",
+    "action": {
+      "delete": "حذف",
+      "edit": "تعديل"
+    },
+    "save_event": "حفظ الحدث",
+    "error_time_range": "وقت الانتهاء لا يمكن أن يكون قبل وقت البدء.",
+    "month": {
+      "jauary": "يناير",
+      "february": "فبراير",
+      "march": "مارس",
+      "april": "أبريل",
+      "may": "مايو",
+      "june": "يونيو",
+      "july": "يوليو",
+      "august": "أغسطس",
+      "september": "سبتمبر",
+      "october": "أكتوبر",
+      "november": "نوفمبر",
+      "december": "ديسمبر"
+    },
+    "day": {
+      "sun": "الأحد",
+      "mon": "الاثنين",
+      "tue": "الثلاثاء",
+      "wed": "الأربعاء",
+      "thu": "الخميس",
+      "fri": "الجمعة",
+      "sat": "السبت",
+      "sun_short": "ح",
+      "mon_short": "ن",
+      "tue_short": "ث",
+      "wed_short": "ر",
+      "thu_short": "خ",
+      "fri_short": "ج",
+      "sat_short": "س"
+    }
+  },
+  "directory": {
+    "title": "دليل الموظفين",
+    "search_placeholder": "ابحث بالاسم أو الدور...",
+    "filter_department": "تصفية حسب القسم",
+    "all_departments": "كل الأقسام",
+    "department": {
+      "engineering": "الهندسة",
+      "hr": "الموارد البشرية",
+      "marketing": "التسويق",
+      "finance": "المالية"
+    },
+    "recognitions_count": "{count} تكريمات",
+    "add_employee": "إضافة موظف",
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "modal": {
+      "create_title": "إنشاء ملف موظف",
+      "edit_title": "تعديل ملف موظف",
+      "label": {
+        "name": "الاسم",
+        "role": "الدور",
+        "email": "البريد الإلكتروني",
+        "department": "القسم",
+        "location": "الموقع"
+      }
+    },
+    "create_success": "تمت إضافة الموظف بنجاح.",
+    "update_success": "تم تحديث الموظف بنجاح.",
+    "delete_success": "تم حذف الموظف بنجاح.",
+    "delete_confirm": "هل أنت متأكد أنك تريد حذف هذا الموظف؟",
+    "table": {
+      "header": {
+        "employee": "الموظف",
+        "role": "الدور",
+        "department": "القسم",
+        "email": "البريد الإلكتروني"
+      },
+      "actions": "الإجراءات"
+    },
+    "view_grid": "عرض الشبكة",
+    "view_table": "عرض الجدول"
+  },
+  "hr_self_service": {
+    "title": "الخدمة الذاتية للموارد البشرية",
+    "attendance_title": "ملخص الحضور",
+    "attendance_rate": "هذا الربع",
+    "leave_balance_title": "رصيد إجازاتي",
+    "request_leave": "طلب إجازة",
+    "my_requests": "طلبات إجازاتي",
+    "all_requests": "جميع طلبات إجازات الموظفين",
+    "balance": {
+      "annual": "سنوية",
+      "sick": "مرضية",
+      "unpaid": "بدون أجر"
+    },
+    "days_remaining": "أيام متبقية",
+    "modal": {
+      "request_title": "تقديم طلب إجازة",
+      "label": {
+        "type": "نوع الإجازة",
+        "start_date": "تاريخ البدء",
+        "end_date": "تاريخ الانتهاء",
+        "reason": "السبب (اختياري)"
+      },
+      "submit_button": "إرسال الطلب"
+    },
+    "request_success": "تم تقديم طلب الإجازة بنجاح.",
+    "approve_success": "تمت الموافقة على طلب الإجازة.",
+    "reject_success": "تم رفض طلب الإجازة.",
+    "withdraw_success": "تم سحب طلب الإجازة بنجاح.",
+    "status": {
+      "pending": "بانتظار الموافقة",
+      "approved": "تمت الموافقة",
+      "rejected": "مرفوض"
+    },
+    "filter_all": "الكل",
+    "action": {
+      "approve": "موافقة",
+      "reject": "رفض",
+      "withdraw": "سحب"
+    },
+    "withdraw_confirm": "هل أنت متأكد من رغبتك في سحب طلب الإجازة هذا؟",
+    "withdraw_modal_title": "تأكيد السحب",
+    "withdraw_confirm_button": "تأكيد السحب",
+    "rejection_reason": "سبب الرفض",
+    "rejection_comment_placeholder": "أدخل سبب الرفض...",
+    "rejection_modal_title": "رفض طلب الإجازة",
+    "table": {
+      "employee": "الموظف",
+      "dates": "التواريخ",
+      "type": "النوع",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "tab": {
+      "my_leave": "معلوماتي",
+      "team_leave": "موافقات إجازات الفريق"
+    },
+    "error_end_date": "تاريخ الانتهاء لا يمكن أن يكون قبل تاريخ البدء."
+  },
+  "rewards": {
+    "title": "المكافآت والتقدير",
+    "give_recognition": "إعطاء تقدير",
+    "recent": "التقديرات الأخيرة",
+    "submit": "إرسال",
+    "submit_success": "تم إرسال التقدير بنجاح!",
+    "nominate_employee": "ترشيح موظف",
+    "nominee_name": "اسم الموظف",
+    "justification": "مبررات الترشيح",
+    "submit_nomination": "إرسال الترشيح",
+    "nomination_success": "تم إرسال الترشيح لموافقة الموارد البشرية.",
+    "recognition_feed": "موجز التقديرات",
+    "nominated_by": "تم الترشيح بواسطة {nominator}",
+    "badge": "وسام",
+    "action": {
+      "approve": "موافقة",
+      "reject": "رفض",
+      "delete": "حذف"
+    },
+    "nomination_status": "حالة الترشيحات"
+  },
+  "engagements": {
+    "title": "حملات المشاركة",
+    "active_campaigns": "الحملات النشطة",
+    "completed_campaigns": "الحملات المكتملة",
+    "participate": "شارك",
+    "participated": "تمت المشاركة",
+    "participation_success": "شكرا لمشاركتك!",
+    "no_active_campaigns": "لا توجد حملات مشاركة نشطة الآن."
+  },
+  "surveys": {
+    "title": "الاستطلاعات",
+    "active": "الاستطلاعات النشطة",
+    "completed": "الاستطلاعات المكتملة",
+    "take_survey": "ابدأ الاستطلاع",
+    "view_results": "عرض النتائج",
+    "take_survey_placeholder": "وظيفة الاستطلاع قيد التطوير.",
+    "view_results_placeholder": "النتائج ليست متاحة بعد.",
+    "create_survey": "إنشاء استطلاع",
+    "create_success": "تم إنشاء الاستطلاع بنجاح.",
+    "submit_success": "تم إرسال ردك بنجاح!",
+    "delete_success": "تم حذف الاستطلاع بنجاح.",
+    "delete_confirm": "هل أنت متأكد أنك تريد حذف هذا الاستطلاع؟",
+    "modal": {
+      "create_title": "إنشاء استطلاع جديد",
+      "edit_title": "تعديل الاستطلاع",
+      "take_title": "المشاركة في الاستطلاع",
+      "label": {
+        "title": "عنوان الاستطلاع",
+        "description": "الوصف (اختياري)",
+        "anonymous": "ردود مجهولة",
+        "required": "مطلوب"
+      },
+      "add_question": "إضافة سؤال",
+      "question_text": "السؤال",
+      "question_type": "نوع السؤال",
+      "add_option": "إضافة خيار",
+      "option_placeholder": "خيار",
+      "question_header": "السؤال {index}",
+      "options_label": "الخيارات"
+    },
+    "save_button": "حفظ الاستطلاع",
+    "submit_button": "إرسال الرد",
+    "question_type": {
+      "text": "نص سطر واحد",
+      "paragraph": "فقرة",
+      "mcq": "اختيار من متعدد",
+      "rating": "تقييم (1-5)"
+    },
+    "results": {
+      "title": "نتائج الاستطلاع",
+      "total_responses": "مجموع الردود",
+      "average_rating": "متوسط التقييم",
+      "from_ratings": "من {count} تقييمات",
+      "no_text_responses": "لا توجد ردود نصية."
+    },
+    "question_count": "{count} أسئلة",
+    "completed_status": "مكتمل",
+    "no_active": "لا توجد استطلاعات نشطة.",
+    "no_completed": "لا توجد استطلاعات مكتملة."
+  },
+  "policies": {
+    "title": "مستندات السياسة",
+    "search_placeholder": "ابحث في المستندات...",
+    "download": "تنزيل",
+    "add_document": "إضافة مستند",
+    "modal": {
+      "create_title": "إنشاء مستند سياسة",
+      "edit_title": "تعديل مستند سياسة",
+      "view_title": "عرض مستند السياسة",
+      "label": {
+        "title": "العنوان",
+        "category": "الفئة",
+        "version": "الإصدار",
+        "visibility": "مرئي لـ",
+        "content": "المحتوى"
+      },
+      "save_button": "حفظ المستند"
+    },
+    "role": {
+      "employee": "موظف",
+      "manager": "مدير",
+      "hr": "موارد بشرية",
+      "admin": "مسؤول"
+    },
+    "action": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "pagination": {
+      "page_of": "صفحة {currentPage} من {totalPages}",
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "create_success": "تم إنشاء مستند السياسة بنجاح.",
+    "update_success": "تم تحديث مستند السياسة بنجاح.",
+    "error_file_type": "نوع ملف غير صالح. يرجى تحميل ملف .txt.",
+    "content_write": "كتابة المحتوى",
+    "content_upload": "رفع ملف"
+  },
+  "tasks": {
+    "title": "مهامي",
+    "new_task": "مهمة جديدة",
+    "status": {
+      "todo": "قيد التنفيذ",
+      "in_progress": "جاري التنفيذ",
+      "done": "مكتمل"
+    },
+    "assign_success": "تم إسناد المهمة بنجاح.",
+    "update_success": "تم تحديث المهمة بنجاح.",
+    "delete_success": "تم حذف المهمة بنجاح.",
+    "create_task": "إنشاء مهمة",
+    "all_tasks": "كل المهام",
+    "due_on": "تستحق في",
+    "modal": {
+      "create_title": "إنشاء مهمة جديدة",
+      "edit_title": "تعديل المهمة",
+      "label": {
+        "title": "عنوان المهمة",
+        "description": "الوصف",
+        "assign_to": "إسناد إلى",
+        "due_date": "تاريخ الاستحقاق"
+      }
+    },
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "delete_confirm": "هل أنت متأكد أنك تريد حذف هذه المهمة؟",
+    "more_options": "المزيد من الخيارات",
+    "save_changes_button": "حفظ التغييرات"
+  },
+  "reports": {
+    "title": "التقارير ولوحات المعلومات",
+    "export": "تصدير",
+    "usage_metrics": "مقاييس الاستخدام",
+    "monthly_active_users": "المستخدمون النشطون شهريًا",
+    "adoption_rates": "معدلات تبني الميزات",
+    "feature": {
+      "announcements": "الإعلانات",
+      "tasks": "المهام",
+      "surveys": "الاستطلاعات"
+    },
+    "hr_summary": "ملخص الموارد البشرية",
+    "project_summary": "ملخص المشروع",
+    "data_table": "بيانات مفصلة",
+    "table": {
+      "header": {
+        "name": "اسم التقرير",
+        "category": "الفئة",
+        "value": "القيمة",
+        "status": "الحالة"
+      }
+    },
+    "export_placeholder": "جاري تصدير بيانات التقرير..."
+  },
+  "search": {
+    "title": "نتائج البحث",
+    "results_for": "نتائج البحث عن '{query}'",
+    "no_results": "لم يتم العثور على نتائج لبحثك.",
+    "category": {
+      "announcements": "الإعلانات",
+      "employees": "الموظفين",
+      "policies": "مستندات السياسة",
+      "newsletters": "النشرات الإخبارية"
+    }
+  },
+  "profile": {
+    "title": "ملفي الشخصي",
+    "label": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "role": "الدور",
+      "department": "القسم",
+      "location": "الموقع",
+      "contact": "معلومات الاتصال"
+    }
+  },
+  "placeholder_under_development": "هذه الوحدة قيد التطوير حاليًا. يرجى التحقق مرة أخرى لاحقًا.",
+  "global": {
+    "error_unexpected": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقًا.",
+    "success_generic": "تمت العملية بنجاح.",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "delete_confirm_title": "تأكيد الحذف",
+    "delete_confirm_message": "هل أنت متأكد أنك تريد حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.",
+    "delete_confirm_button": "حذف",
+    "add_new": "إضافة جديد",
+    "table_no_data": "لا توجد بيانات متاحة."
+  },
+  "table": {
+    "rows_per_page": "صفوف لكل صفحة"
+  },
+  "tooltip": {
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "download": "تنزيل",
+    "more_options": "المزيد من الخيارات",
+    "remove_question": "إزالة السؤال",
+    "remove_option": "إزالة الخيار",
+    "board_view": "عرض اللوحة",
+    "list_view": "عرض القائمة"
+  },
+  "helpdesk": {
+    "create_success": "تم إنشاء تذكرة المساعدة بنجاح.",
+    "update_success": "تم تحديث تذكرة المساعدة بنجاح.",
+    "modal": {
+      "create_title": "إنشاء تذكرة مساعدة",
+      "edit_title": "تعديل تذكرة مساعدة",
+      "label": {
+        "subject": "الموضوع",
+        "category": "الفئة",
+        "description": "الوصف"
+      },
+      "category_options": {
+        "it": "تقنية المعلومات",
+        "hr": "الموارد البشرية",
+        "facilities": "المرافق"
+      }
+    }
+  },
+  "system_settings": {
+    "demo_subtitle": "عرض للمكونات المشتركة الجديدة لواجهة المستخدم.",
+    "dropdown_title": "قائمة منسدلة مخصصة",
+    "dropdown_button": "افتح القائمة",
+    "dropdown_profile": "الملف الشخصي",
+    "dropdown_billing": "الفواتير",
+    "dropdown_settings": "الإعدادات",
+    "dropdown_logout": "تسجيل الخروج",
+    "select_title": "عنصر تحكم تحديد مخصص",
+    "select_label_lang": "اللغة الافتراضية",
+    "select_placeholder_lang": "اختر لغة...",
+    "select_option_en": "English",
+    "select_option_ar": "العربية (Arabic)",
+    "select_option_fr": "Français (French)",
+    "select_label_notify": "مستوى الإشعارات",
+    "select_placeholder_notify": "حدد مستوى الإشعارات...",
+    "select_option_all": "جميع الإشعارات",
+    "select_option_mentions": "الإشارات فقط",
+    "select_option_none": "لا شيء",
+    "form_value_title": "قيمة النموذج:",
+    "css_demo_title": "عرض CSS مخصص لـ Tailwind v4",
+    "css_demo_hello": "أهلاً بالعالم!",
+    "css_demo_desc": "هذا النص منسق بلون مخصص ('clifford') تم تعريفه باستخدام التوجيه الجديد `@theme` في Tailwind CSS v4."
+  },
+
+    "announcements": {
+    "pageTitle": "الإعلانات",
+    "title": "العنوان",
+    "author": "الكاتب",
+    "publishDate": "تاريخ النشر",
+    "status": "الحالة",
+    "priority": "الأولوية"
+  },
+  "search": "بحث",
+  "addNew": "إضافة إعلان",
+  "actions": "الإجراءات",
+  "view": "عرض",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "noRecordsFound": "لا توجد إعلانات",
+  "table": {
+    "pageReport": "عرض {first} إلى {last} من أصل {totalRecords}"
+  }
+}

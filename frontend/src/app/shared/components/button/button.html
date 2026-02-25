@@ -1,0 +1,6 @@
+<button [type]="type()" [disabled]="disabled()" [class]="buttonClass()">
+  @if (icon()) {
+    <i class="pi" [class]="icon()" [class]="iconClass()"></i>
+  }
+  <ng-content></ng-content>
+</button>
