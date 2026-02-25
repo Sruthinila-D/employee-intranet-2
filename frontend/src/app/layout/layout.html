@@ -1,0 +1,152 @@
+<div class="flex flex-col h-screen w-full overflow-x-hidden bg-muted text-foreground">
+  <!-- ================= HEADER ================= -->
+  <header class="h-16 bg-primary text-primary-foreground flex-shrink-0 z-20 max-w-full">
+    <div class="flex items-center justify-between h-full max-w-7xl mx-auto px-6">
+      <!-- LEFT -->
+      <div class="flex items-center gap-4">
+        <!-- Sidebar Toggle -->
+        <p-button
+          icon="pi pi-bars"
+          [rounded]="true"
+          (onClick)="toggleSidebar()"
+          [pTooltip]="
+            (isSidebarOpen()
+              ? 'layout.tooltip.toggle_sidebar_collapse'
+              : 'layout.tooltip.toggle_sidebar_expand'
+            ) | translate
+          "
+          tooltipPosition="bottom"
+        />
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div class="p-1 bg-black/20 rounded-md">
+            <span class="font-bold text-lg">S</span>
+          </div>
+          <span class="font-bold text-lg hidden md:inline">
+            {{ 'layout.sami_project' | translate }}
+          </span>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="flex-1 flex justify-center px-8 min-w-0">
+        <!-- Search -->
+        <div class="hidden md:block w-full max-w-md min-w-0">
+          <p-iconfield class="w-full min-w-0">
+            <!-- Search Icon -->
+            <p-inputicon class="pi pi-search" />
+
+            <!-- Input -->
+            <input
+              type="text"
+              pInputText
+              class="w-full min-w-0"
+              [placeholder]="'layout.search_placeholder' | translate"
+              (keydown.enter)="onSearchSubmit($event)"
+            />
+          </p-iconfield>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <!-- Mobile Search -->
+        <p-button
+          icon="pi pi-search"
+          [rounded]="true"
+          class="md:hidden"
+          [pTooltip]="'layout.search_placeholder' | translate"
+          tooltipPosition="bottom"
+        />
+
+        <!-- Theme Toggle -->
+        <p-button
+          [icon]="currentTheme() === 'light' ? 'pi pi-moon' : 'pi pi-sun'"
+          [rounded]="true"
+          (onClick)="toggleTheme()"
+          [pTooltip]="
+            (currentTheme() === 'light' ? 'layout.tooltip.dark_mode' : 'layout.tooltip.light_mode')
+              | translate
+          "
+          tooltipPosition="bottom"
+        />
+
+        <!-- Language Toggle -->
+        <p-button
+          type="button"
+          [rounded]="true"
+          (onClick)="switchLanguage()"
+          styleClass="px-3 flex items-center gap-1"
+          [pTooltip]="
+            (currentLanguage() === 'en' ? 'layout.language.arabic' : 'layout.language.english')
+              | translate
+          "
+          tooltipPosition="bottom"
+        >
+          <span class="text-sm font-semibold">
+            {{
+              currentLanguage() === 'en'
+                ? ('layout.language.arabic' | translate)
+                : ('layout.language.english' | translate)
+            }}
+          </span>
+          <i class="pi pi-globe"></i>
+        </p-button>
+        <p-button
+  label="{{ 'layout.logout_button' | translate }}"
+  icon="pi pi-sign-out"
+  severity="danger"
+  variant="text"
+  (onClick)="promptLogout()">
+</p-button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= BODY ================= -->
+  <div class="flex flex-1 overflow-hidden">
+    <!-- SIDEBAR -->
+    <aside
+      class="flex flex-col bg-card text-card-foreground transition-all duration-300 ease-in-out z-10 border-e border-border flex-shrink-0"
+      [class]="isSidebarOpen() ? 'w-64' : 'w-20'"
+    >
+      <nav class="flex-grow pt-4 overflow-y-auto" [class.overflow-x-hidden]="!isSidebarOpen()">
+        <ul>
+          @for (item of sidebarNavItems(); track item.labelKey) {
+            <li class="px-4">
+              <a
+                [routerLink]="item.path"
+                routerLinkActive="bg-primary text-primary-foreground font-semibold hover:bg-primary/90"
+                [routerLinkActiveOptions]="{ exact: item.exact }"
+                class="items-center my-1 p-3 rounded-lg transition-colors duration-200 text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                [class.flex]="isSidebarOpen()"
+                [class.justify-start]="isSidebarOpen()"
+                [class.w-full]="isSidebarOpen()"
+                [class.inline-flex]="!isSidebarOpen()"
+                [class.justify-center]="!isSidebarOpen()"
+                [pTooltip]="!isSidebarOpen() ? (item.labelKey | translate) : null"
+                tooltipPosition="right"
+              >
+                <i class="pi" [class]="item.icon" [class.me-4]="isSidebarOpen()"></i>
+
+                @if (isSidebarOpen()) {
+                  <span class="font-medium">
+                    {{ item.labelKey | translate }}
+                  </span>
+                }
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- PAGE CONTENT -->
+    <main class="flex-1 overflow-x-hidden overflow-y-auto">
+      <div class="p-3 max-w-7xl mx-auto">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+</div>

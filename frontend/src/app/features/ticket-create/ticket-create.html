@@ -1,0 +1,104 @@
+<!-- Header -->
+<div class="flex align-items-center gap-3 mb-4 page-header">
+  <button
+    pButton
+    type="button"
+    icon="pi pi-arrow-left"
+    class="p-button-text p-button-rounded"
+    (click)="goBack()">
+  </button>
+
+  <h2 class="m-0 page-title">Create Ticket</h2>
+</div>
+
+<p-card>
+  <form [formGroup]="ticketForm" (ngSubmit)="submit()" class="p-fluid">
+
+    <!-- Title -->
+    <div class="field mb-3">
+      <label>Title *</label>
+      <input pInputText formControlName="title" />
+      <small class="p-error" *ngIf="ticketForm.get('title')?.invalid && ticketForm.get('title')?.touched">
+        Title is required
+      </small>
+    </div>
+
+    <!-- Description -->
+    <div class="field mb-3">
+      <label>Description *</label>
+      <textarea pTextarea rows="4" formControlName="description"></textarea>
+      <small class="p-error" *ngIf="ticketForm.get('description')?.invalid && ticketForm.get('description')?.touched">
+        Description is required
+      </small>
+    </div>
+
+    <!-- Category -->
+    <div class="field mb-3">
+      <label>Category *</label>
+      <p-select
+        [options]="categories"
+        formControlName="category"
+        placeholder="Select Category">
+      </p-select>
+    </div>
+
+    <!-- Priority -->
+    <div class="field mb-3">
+      <label>Priority *</label>
+      <p-select
+        [options]="priorities"
+        formControlName="priority"
+        placeholder="Select Priority">
+      </p-select>
+    </div>
+
+    <!-- Upload + Submit Row -->
+<div class="upload-submit-row">
+
+  <!-- Left Side (Upload) -->
+  <div class="upload-section">
+    <label class="upload-label">
+      Upload File (PDF only, max 1MB) *
+    </label>
+
+    <div class="flex align-items-center gap-3 mt-2">
+      <input
+        type="file"
+        #fileInput
+        accept="application/pdf"
+        (change)="onFileSelect($event)"
+        hidden
+      />
+
+      <button
+        type="button"
+        pButton
+        icon="pi pi-upload"
+        label="Choose"
+        class="p-button-success"
+        (click)="fileInput.click()">
+      </button>
+
+      <span class="file-name" *ngIf="selectedFileMeta">
+        {{ selectedFileMeta.file_name }}
+      </span>
+    </div>
+
+    <small class="p-error mt-2 block" *ngIf="fileError">
+      {{ fileError }}
+    </small>
+  </div>
+
+  <!-- Right Side (Submit) -->
+  <div class="submit-section">
+    <button
+      pButton
+      type="submit"
+      icon="pi pi-check"
+      label="Submit"
+      class="p-button-success"
+      [disabled]="ticketForm.invalid || !selectedFileBase64">
+    </button>
+  </div>
+
+</div>

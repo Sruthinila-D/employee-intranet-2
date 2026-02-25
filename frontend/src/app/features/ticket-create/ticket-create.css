@@ -1,0 +1,43 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.p-card {
+  padding: 2rem;
+}
+.page-header {
+  padding-left: 0.5rem;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+button.p-button-success {
+  border-radius: 8px;
+}
+.upload-submit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-label {
+  font-weight: 500;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.submit-section {
+  display: flex;
+  align-items: flex-end;
+}

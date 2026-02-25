@@ -1,0 +1,294 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+
+/* =========================================================
+   TAILWIND v4 ENTRY (CSS-FIRST)
+========================================================= */
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+/* =========================================================
+   RAW DESIGN TOKENS (NUMERIC — NO ALPHA)
+   🔒 SINGLE SOURCE OF TRUTH
+========================================================= */
+:root {
+  /* Core */
+  --background: 248 250 252;
+  --foreground: 15 23 42;
+
+  /* Surfaces */
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+  --popover: 255 255 255;
+  --popover-foreground: 15 23 42;
+
+  /* Brand */
+  --primary: 0 92 77;
+  --primary-foreground: 255 255 255;
+  --secondary: 71 85 105;
+  --secondary-foreground: 255 255 255;
+
+  /* Neutral */
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+  --accent: 226 232 240;
+  --accent-foreground: 15 23 42;
+
+  /* Borders & Focus */
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 0 92 77;
+
+  /* States */
+  --destructive: 220 38 38;
+  --success: 22 163 74;
+  --warning: 245 158 11;
+  --info: 59 130 246;
+
+  /* Layout */
+  --sidebar: 241 245 249;
+  --sidebar-foreground: 15 23 42;
+}
+
+/* =========================================================
+   DARK MODE TOKENS
+========================================================= */
+html.dark {
+  --background: 0 0 0;
+  --foreground: 229 231 235;
+
+  --card: 17 17 17;
+  --card-foreground: 229 231 235;
+  --popover: 23 23 23;
+  --popover-foreground: 229 231 235;
+
+  --primary: 45 212 191;
+  --primary-foreground: 0 0 0;
+
+  --muted: 31 31 31;
+  --muted-foreground: 156 163 175;
+
+  --accent: 31 31 31;
+  --accent-foreground: 229 231 235;
+
+  --border: 38 38 38;
+  --input: 38 38 38;
+  --ring: 45 212 191;
+
+  --sidebar: 0 0 0;
+  --sidebar-foreground: 229 231 235;
+}
+
+/* =========================================================
+   TAILWIND v4 THEME — ALPHA-AWARE
+   ✅ THIS IS WHERE <alpha-value> WORKS
+========================================================= */
+@theme inline {
+  --color-background: rgb(var(--background) / <alpha-value>);
+  --color-foreground: rgb(var(--foreground) / <alpha-value>);
+
+  --color-card: rgb(var(--card) / <alpha-value>);
+  --color-card-foreground: rgb(var(--card-foreground) / <alpha-value>);
+
+  --color-popover: rgb(var(--popover) / <alpha-value>);
+  --color-popover-foreground: rgb(var(--popover-foreground) / <alpha-value>);
+
+  --color-primary: rgb(var(--primary) / <alpha-value>);
+  --color-primary-foreground: rgb(var(--primary-foreground) / <alpha-value>);
+
+  --color-secondary: rgb(var(--secondary) / <alpha-value>);
+  --color-secondary-foreground: rgb(var(--secondary-foreground) / <alpha-value>);
+
+  --color-muted: rgb(var(--muted) / <alpha-value>);
+  --color-muted-foreground: rgb(var(--muted-foreground) / <alpha-value>);
+
+  --color-accent: rgb(var(--accent) / <alpha-value>);
+  --color-accent-foreground: rgb(var(--accent-foreground) / <alpha-value>);
+
+  --color-border: rgb(var(--border) / <alpha-value>);
+  --color-input: rgb(var(--input) / <alpha-value>);
+  --color-ring: rgb(var(--ring) / <alpha-value>);
+
+  --color-destructive: rgb(var(--destructive) / <alpha-value>);
+  --color-success: rgb(var(--success) / <alpha-value>);
+  --color-warning: rgb(var(--warning) / <alpha-value>);
+  --color-info: rgb(var(--info) / <alpha-value>);
+
+  --color-sidebar: rgb(var(--sidebar) / <alpha-value>);
+  --color-sidebar-foreground: rgb(var(--sidebar-foreground) / <alpha-value>);
+}
+
+/* =========================================================
+   TAILWIND v4 THEME — SOLID (NO ALPHA)
+========================================================= */
+@theme {
+  --color-background-solid: rgb(var(--background));
+  --color-foreground-solid: rgb(var(--foreground));
+  --color-primary-solid: rgb(var(--primary));
+  
+}
+
+@theme {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+
+  --color-destructive: rgb(var(--destructive));
+  --color-destructive-foreground: rgb(var(--destructive-foreground));
+
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+
+  --color-success: rgb(var(--success));
+  --color-warning: rgb(var(--warning));
+  --color-info: rgb(var(--info));
+
+  --color-sidebar: rgb(var(--sidebar));
+  --color-sidebar-foreground: rgb(var(--sidebar-foreground));
+}
+
+/* =========================================================
+   PRIME NG AURA — 1:1 TOKEN MAPPING
+   ❌ NO <alpha-value> HERE (BY DESIGN)
+========================================================= */
+:root {
+  /* Brand */
+  --primary-color: rgb(var(--primary));
+  --primary-color-text: rgb(var(--primary-foreground));
+
+  /* Surfaces */
+  --surface-0: rgb(var(--background));
+  --surface-50: rgb(var(--muted));
+  --surface-100: rgb(var(--accent));
+  --surface-200: rgb(var(--border));
+  --surface-300: rgb(var(--input));
+  --surface-card: rgb(var(--card));
+  --surface-overlay: rgb(var(--popover));
+  --surface-ground: rgb(var(--background));
+  --surface-border: rgb(var(--border));
+
+  /* Text */
+  --text-color: rgb(var(--foreground));
+  --text-color-secondary: rgb(var(--muted-foreground));
+  --text-color-disabled: color-mix(
+    in srgb,
+    rgb(var(--foreground)) 40%,
+    transparent
+  );
+
+  /* States */
+  --highlight-bg: color-mix(
+    in srgb,
+    rgb(var(--primary)) 15%,
+    transparent
+  );
+  --highlight-text-color: rgb(var(--primary));
+  --focus-ring: 0 0 0 2px rgb(var(--ring) / 0.4);
+
+  /* Status */
+  --green-500: rgb(var(--success));
+  --yellow-500: rgb(var(--warning));
+  --blue-500: rgb(var(--info));
+  --red-500: rgb(var(--destructive));
+}
+
+html.dark {
+  --highlight-bg: color-mix(
+    in srgb,
+    rgb(var(--primary)) 20%,
+    transparent
+  );
+  --focus-ring: 0 0 0 2px rgb(var(--ring) / 0.5);
+}
+
+/* =========================================================
+   BASE STYLES
+========================================================= */
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: theme(--color-background);
+    color: theme(--color-foreground);
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme(--color-muted-foreground) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme(--color-muted-foreground);
+  border-radius: 10px;
+}
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  background-color: theme(--color-foreground);
+  color: theme(--color-background);
+  z-index: 50;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+html[dir='rtl'] .p-datepicker-prev svg,
+html[dir='rtl'] .p-datepicker-next svg {
+  transform: rotate(180deg);
+}
+
+:root {
+  --p-togglebutton-content-checked-background: var(--primary);
+}
+
+.dark {
+  --p-togglebutton-content-checked-background: var(--primary);
+}

@@ -1,0 +1,81 @@
+<p-confirmDialog></p-confirmDialog>
+
+<div class="ticket-header">
+
+  <h2 class="page-title m-0">
+    Ticket Requests
+  </h2>
+
+  <button
+    pButton
+    label="Create Ticket"
+    icon="pi pi-plus"
+    class="p-button-success"
+    routerLink="/tickets/create">
+  </button>
+
+</div>
+
+<p-table
+  [value]="tickets"
+  [loading]="loading"
+  dataKey="ticket_id"
+  [paginator]="true"
+  [rows]="5">
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Ticket No</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Attachment</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-ticket>
+  <tr>
+    <td>{{ ticket.ticket_number }}</td>
+    <td>{{ ticket.title }}</td>
+    <td>{{ ticket.category }}</td>
+    <td>{{ ticket.priority }}</td>
+
+    <td>
+      <p-tag
+        [value]="ticket.status"
+        [severity]="getSeverity(ticket.status)">
+      </p-tag>
+    </td>
+
+    <!-- Attachment Column -->
+    <td>
+      <button
+        *ngIf="ticket.has_attachment"
+        pButton
+        icon="pi pi-paperclip"
+        class="p-button-text p-button-sm"
+        (click)="viewAttachment(ticket.ticket_id!)">
+      </button>
+
+      <span *ngIf="!ticket.has_attachment" class="text-500">
+        —
+      </span>
+    </td>
+
+    <td>{{ ticket.created_at | date:'short' }}</td>
+
+    <td>
+      <button
+        pButton
+        icon="pi pi-trash"
+        severity="danger"
+        (click)="deleteTicket(ticket.ticket_id!)">
+      </button>
+    </td>
+  </tr>
+</ng-template>
+
+</p-table>

@@ -1,0 +1,178 @@
+
+
+  <p-table
+    #dt
+    [value]="data()"
+    dataKey="id"
+    class="p-datatable-sm"
+    showGridlines
+    stripedRows
+    showClearButton="true"
+    showApplyButton="true"
+    showAddButton="true"
+    [rowHover]="true"
+    [rows]="rows"
+    [size]="'small'"
+    [paginator]="true"
+    [loading]="loading()"
+    [globalFilterFields]="globalFilterFields()"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="{{ 'table.pageReport' | translate }}"
+  >
+
+    <!-- ================= CAPTION ================= -->
+
+    <ng-template pTemplate="caption">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 p-2">
+
+        <h2 class="text-xl font-semibold">
+          {{ titleKey | translate }}
+        </h2>
+
+        <div class="flex items-center gap-2">
+
+          <p-iconField iconPosition="left">
+            <p-inputIcon>
+              <i class="pi pi-search"></i>
+            </p-inputIcon>
+            <input
+              pInputText
+              type="text"
+              [value]="globalFilterValue()"
+              (input)="
+                globalFilterValue.set($any($event.target).value);
+                dt.filterGlobal($any($event.target).value, 'contains')
+              "
+              [placeholder]="'search' | translate"
+            />
+          </p-iconField>
+
+          @if (add.observers.length > 0) {
+            <p-button
+              icon="pi pi-plus"
+              [label]="'addNew' | translate"
+              (click)="add.emit()"
+            />
+          }
+
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- ================= HEADER ================= -->
+
+    <ng-template pTemplate="header">
+      <tr>
+        @for (col of columns(); track col.field) {
+          <th [pSortableColumn]="isSortable(col)">
+            {{ col.headerKey | translate }}
+
+            @if (col.sortable !== false) {
+              <p-sortIcon [field]="col.field" />
+            }
+
+            @if (col.filter) {
+<p-columnFilter
+  [field]="col.field"
+  type="text"
+  [matchMode]="col.filterMatchMode ?? 'contains'"
+  display="menu"
+  class="ml-auto"
+/>
+            }
+          </th>
+        }
+
+        @if (showActions) {
+          <th class="w-32 text-center">
+            {{ 'actions' | translate }}
+          </th>
+        }
+      </tr>
+    </ng-template>
+
+    <!-- ================= BODY ================= -->
+
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        @for (col of columns(); track col.field) {
+          <td>
+            @switch (col.dataType) {
+
+              @case ('tag') {
+                <p-tag
+                  [value]="item[col.field]"
+                  [severity]="getSeverity(item[col.field])"
+                />
+              }
+
+              @case ('progressBar') {
+                <p-progressBar
+                  [value]="item[col.field]"
+                  [showValue]="false"
+                />
+              }
+
+              @default {
+                {{ formatCell(item, col) }}
+              }
+            }
+          </td>
+        }
+
+        @if (showActions) {
+          <td class="text-center">
+            <div class="flex gap-2 justify-center action-buttons">
+
+              @if (enableView) {
+                <p-button
+                  icon="pi pi-eye"
+                  severity="info"
+                  variant="outlined"
+                  [rounded]="true"
+                  [pTooltip]="'view' | translate"
+                  (click)="view.emit(item)"
+                />
+              }
+
+              @if (enableEdit) {
+                <p-button
+                  icon="pi pi-pencil"
+                  variant="outlined"
+                  [rounded]="true"
+                  [pTooltip]="'edit' | translate"
+                  (click)="edit.emit(item)"
+                />
+              }
+
+              @if (enableDelete) {
+                <p-button
+                  icon="pi pi-trash"
+                  severity="danger"
+                  [rounded]="true"
+                  [pTooltip]="'delete' | translate"
+                  (click)="remove.emit(item)"
+                />
+              }
+
+            </div>
+          </td>
+        }
+      </tr>
+    </ng-template>
+
+    <!-- ================= EMPTY ================= -->
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td
+          [attr.colspan]="columns().length + (showActions ? 1 : 0)"
+          class="text-center py-4"
+        >
+          {{ 'noRecordsFound' | translate }}
+        </td>
+      </tr>
+    </ng-template>
+
+  </p-table>
+
