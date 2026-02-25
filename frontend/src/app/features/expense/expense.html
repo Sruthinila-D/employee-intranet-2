@@ -108,12 +108,22 @@
     <div class="form-field">
       <label>Upload Bill (PDF only)</label>
       <p-fileUpload
-        mode="basic"
-        accept="application/pdf"
-        customUpload="true"
-        (onSelect)="onFileSelected($event)">
-      </p-fileUpload>
+  mode="basic"
+  name="bills"
+  [customUpload]="true"
+  (onSelect)="onFileSelected($event)"
+  accept=".pdf"
+  multiple="true">
+</p-fileUpload>
     </div>
+    <div *ngIf="selectedFiles.length > 0" style="margin-top:10px;">
+  <p><strong>Selected Files:</strong></p>
+  <ul>
+    <li *ngFor="let file of selectedFiles">
+      {{ file.name }} ({{ file.size / 1024 | number:'1.0-2' }} KB)
+    </li>
+  </ul>
+</div>
 
     <!-- SUBMIT -->
     <div class="submit-area mt-3">

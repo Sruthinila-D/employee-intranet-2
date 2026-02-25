@@ -33,14 +33,11 @@ import { TableModule } from 'primeng/table';
 })
 export class ExpenseComponent implements OnInit {
 
-  // TABLE DATA
   expenses: any[] = [];
+  users: any[] = [];
 
-  // DIALOG CONTROL
   showCreateDialog = false;
   showSuccessDialog = false;
-
-  users: any[] = [];
 
   expenseTypes = [
     'Travel',
@@ -59,7 +56,8 @@ export class ExpenseComponent implements OnInit {
     reason: ''
   };
 
-  selectedFile!: File;
+  // ✅ MULTIPLE FILES
+  selectedFiles: File[] = [];
 
   constructor(private expenseService: ExpenseService) {}
 
@@ -68,35 +66,25 @@ export class ExpenseComponent implements OnInit {
     this.loadExpenses();
   }
 
-  // LOAD USERS
   loadUsers() {
-    this.expenseService.getUsers()
-      .subscribe({
-        next: (data: any[]) => {
-          this.users = data;
-        },
-        error: (err) => console.error(err)
-      });
+    this.expenseService.getUsers().subscribe({
+      next: (data: any[]) => this.users = data,
+      error: (err) => console.error(err)
+    });
   }
 
-  // LOAD EXPENSES FOR TABLE
   loadExpenses() {
-    this.expenseService.getExpenses()
-      .subscribe({
-        next: (data: any[]) => {
-          this.expenses = data;
-        },
-        error: (err) => console.error(err)
-      });
+    this.expenseService.getExpenses().subscribe({
+      next: (data: any[]) => this.expenses = data,
+      error: (err) => console.error(err)
+    });
   }
 
-  // OPEN CREATE DIALOG
   openDialog() {
     this.resetForm();
     this.showCreateDialog = true;
   }
 
-  // RESET FORM
   resetForm() {
     this.expense = {
       user_id: 1,
@@ -106,20 +94,21 @@ export class ExpenseComponent implements OnInit {
       currency: 'INR',
       reason: ''
     };
-    this.selectedFile = undefined!;
+    this.selectedFiles = [];
   }
 
+  // ✅ HANDLE MULTIPLE FILE SELECT
   onFileSelected(event: any) {
-    this.selectedFile = event.files[0];
-  }
-
-  isOnlySpaces(value: string): boolean {
-    return value.trim().length === 0;
-  }
+  console.log('Selected files:', event.currentFiles);
+  this.selectedFiles = event.currentFiles;
+}
 
   submitExpense() {
 
-    if (!this.selectedFile) return;
+    if (!this.selectedFiles || this.selectedFiles.length === 0) {
+      alert('Please upload at least one PDF');
+      return;
+    }
 
     const formattedDate = this.expense.expense_date
       ? new Date(this.expense.expense_date).toISOString().split('T')[0]
@@ -133,30 +122,31 @@ export class ExpenseComponent implements OnInit {
     formData.append('amount', String(this.expense.amount));
     formData.append('currency', this.expense.currency);
     formData.append('reason', this.expense.reason.trim());
-    formData.append('bill', this.selectedFile);
-this.expenseService.createExpense(formData).subscribe({
-    next: (res) => {
-      // 1. Close the entry form immediately
-      this.showCreateDialog = false;
 
-      // 2. Small delay to let the first dialog vanish, then show success
-      setTimeout(() => {
-        this.showSuccessDialog = true;
-
-        // 3. Auto-hide success message after 2 seconds
-        setTimeout(() => {
-          this.showSuccessDialog = false;
-          
-          // 4. Refresh data and reset the form for next time
-          this.loadExpenses();
-          this.resetForm();
-        }, 2000);
-      }, 300);
-    },
-    error: (err) => {
-      console.error(err);
-      alert('Error creating expense. Please try again.');
+    // ✅ APPEND MULTIPLE FILES
+    for (let file of this.selectedFiles) {
+      formData.append('bills', file);
     }
-  });
-}
+
+    this.expenseService.createExpense(formData).subscribe({
+      next: () => {
+        this.showCreateDialog = false;
+
+        setTimeout(() => {
+          this.showSuccessDialog = true;
+
+          setTimeout(() => {
+            this.showSuccessDialog = false;
+            this.loadExpenses();
+            this.resetForm();
+          }, 2000);
+
+        }, 300);
+      },
+      error: (err) => {
+        console.error(err);
+        alert('Error creating expense. Please try again.');
+      }
+    });
+  }
 }
